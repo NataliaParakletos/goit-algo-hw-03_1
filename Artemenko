@@ -18,7 +18,7 @@ except ValueError:
 import random 
 
 lot=[]
-def get_numbers_ticket(min=int(input()), max=int(input()), quantity=int(input())):
+def get_numbers_ticket(min=int(input("введіть мінімальне число ")), max=int(input("введіть максимальне число ")), quantity=int(input("введіть кількість чисел у вибірці "))):
     if min>=max:
         print(f"мінімальне число більше максимального")
     else:
