@@ -17,13 +17,18 @@ except ValueError:
 ## лотерея
 import random 
 
-lot=[] 
-while len(lot)<49: 
-    a=random.randint(1,49) 
-    if a not in lot: 
-        lot.append(a) 
-s=random.sample(lot,6) 
-print(s)
+lot=[]
+def get_numbers_ticket(min=int(input()), max=int(input()), quantity=int(input())):
+    if min>=max:
+        print(f"мінімальне число більше максимального")
+    else:
+        while len(lot)<quantity: 
+            a=random.randint(min,max) 
+            if a not in lot: 
+                lot.append(a)
+    return
+get_numbers_ticket()
+print(f"ваші лотерейні числа {lot}")
 
 
 
